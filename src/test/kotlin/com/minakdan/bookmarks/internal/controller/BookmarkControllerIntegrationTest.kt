@@ -112,7 +112,4 @@ class BookmarkControllerIntegrationTest {
             .andExpect(status().isOk)
             .andExpect(jsonPath("$", containsInAnyOrder("java", "kotlin", "jpa","jooq")))
     }
-
-
-    // TODO: create -> 201, list (без фильтров / tag / favorite / комбинация), getById (200/404), update, delete (204 -> 404), /tags (с данными / пустая БД)
 }
