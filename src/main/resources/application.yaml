@@ -1,3 +1,10 @@
 spring:
   application:
     name: bookmarks
+  datasource:
+    url: jdbc:postgresql://${dbHost}:${dbPort}/${dbName}
+    username: ${dbUser}
+    password: ${dbPassword}
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
